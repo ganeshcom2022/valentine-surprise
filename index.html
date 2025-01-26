@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Access Page: Login -->
+    <section id="access-page" class="active">
+      <h1>Welcome to a Special Surprise 🎁</h1>
+
+      <p>This surprise is dedicated to someone very special ❤️</p>
+      <p>Please enter your name and password to continue:</p>
+      <input type="text" id="name-input" placeholder="Enter your name">
+      ❤️
+       <input type="password" id="password-input" placeholder="Enter password">
+      
+      ❤️
+      <button onclick="checkAccess()">Unlock</button>
+      <p id="error-message" class="error"></p>
+    </section>
+
+    <!-- Page 1: Will You Be My Valentine -->
+    <section id="valentine-page" class="hidden">
+      <h1>Will you be my valentine? 🌹</h1>
+      <img src="cat-begging.gif" alt="Cute Cat Begging" class="center-image">
+      <div class="button-container">
+        <button onclick="nextPage('yes-response')">Yes</button>
+        <button onclick="nextPage('no-response')">I no no wanna (╥﹏╥)</button>
+      </div>
+    </section>
+
+    <!-- Page 2: Yes Response -->
+    <section id="yes-response" class="hidden">
+      <h1>Yay! I’m so happy! ❤️</h1>
+      <img src="thank-you-so-much-chris.gif" alt="Thank You GIF" class="center-image">
+      <p>Let’s plan a special day together!</p>
+      <button onclick="nextPage('free-day-page')">Click Me</button>
+    </section>
+
+    <!-- Page 3: No Response -->
+    <section id="no-response" class="hidden">
+      <h1>That’s okay. You’re still amazing! 🌟</h1>
+      <button onclick="nextPage('valentine-page')">Go Back</button>
+    </section>
+
+    <!-- Page 4: Free Day Selection -->
+    <section id="free-day-page" class="hidden">
+      <h1>When are you free? 🗓️</h1>
+      <input type="date" id="free-day-input">
+      <p>Select your free day, and the countdown will begin!</p>
+      <button onclick="startCountdown()">Submit</button>
+    </section>
+
+    <!-- Countdown Page -->
+    <section id="countdown-page" class="hidden">
+      <h1>Countdown to Our Special Day ❤️</h1>
+      <div id="countdown"></div>
+      <button onclick="nextPage('food-page')">Next</button>
+    </section>
+
+    <!-- Page 5: Food & Gifts -->
+    <section id="food-page" class="hidden">
+      <h1>What should I send you as a gift? 🎁</h1>
+      <div class="gift-grid">
+        <label><input type="checkbox" value="Chocolates"> A box of Chocolates 🍫</label>
+        <label><input type="checkbox" value="Teddy Bear"> A Cute Teddy Bear 🧸</label>
+        <label><input type="checkbox" value="Flowers"> A Bouquet of Flowers 🌹</label>
+        <label><input type="checkbox" value="Jewelry"> Jewellery or Accessories 💍</label>
+        <label><input type="checkbox" value="Skincare"> Skincare or Beauty Products 🧴</label>
+      </div>
+      <button onclick="nextPage('activity-page')">Next</button>
+    </section>
+
+    <!-- Page 6: Virtual Activities -->
+    <section id="activity-page" class="hidden">
+      <h1>How should we celebrate from afar? 🌏</h1>
+      <div class="activity-grid">
+        <label><input type="checkbox" value="Virtual Date"> Virtual Dinner Date 🍽️</label>
+        <label><input type="checkbox" value="Movie Night"> Watch a Movie Together 🎥</label>
+        <label><input type="checkbox" value="Online Game"> Play an Online Game 🎮</label>
+        <label><input type="checkbox" value="Photo Exchange"> Share our Favorite Photos 📸</label>
+        <label><input type="checkbox" value="Music Session"> Listen to Our Favorite Songs 🎵</label>
+      </div>
+      <button onclick="nextPage('thank-you-page')">Submit</button>
+    </section>
+
+    <!-- Thank You Page with Automatic Love Message -->
+    <section id="thank-you-page" class="hidden">
+      <h1>Thank you for being my valentine ❤️</h1>
+      <p>You mean the world to me, Dikshya Pandey! 🌹</p>
+      <button onclick="nextPage('biggest-surprise')">Click to Reveal the Biggest Surprise</button>
+    </section>
+
+    <!-- Biggest Surprise Page -->
+    <section id="biggest-surprise" class="hidden">
+      <h1>"This year, I’m coming to meet you in Nepal! ✨"</h1>
+      <p>Get ready for an unforgettable moment! ❤️</p>
+      <img src="planes-heart.gif" alt="Planes Heart" class="center-image">
+      <audio autoplay loop>
+        <source src="romantic-song.mp3" type="audio/mp3">
+      </audio>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
