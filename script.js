@@ -4,7 +4,7 @@ function checkAccess() {
   const passwordInput = document.getElementById("password-input").value.trim();
   const errorMessage = document.getElementById("error-message");
 
-  if (nameInput.toLowerCase() === "dikshya pandey" && passwordInput === "2025") {
+  if (nameInput.toLowerCase() === "shihul" && passwordInput === "2025") {
     // Hide the access page and show the valentine page
     document.getElementById("access-page").classList.add("hidden");
     document.getElementById("valentine-page").classList.remove("hidden");
